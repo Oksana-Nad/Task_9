@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Визиты в клиники
+{% endblock %}
+
+{% block body %}
+<h1>Список клиник</h1>
+<table style="border: 1px solid black">
+    <tr >
+        <th>Номер визита</th>
+        <th>Название клиники</th>
+        <th>Имя доктора</th>
+        <th>Специализация</th>
+        <th >Количество посещений</th>
+    </tr>
+    {% for row in data %}
+    <tr style="border: 1px solid black">
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
